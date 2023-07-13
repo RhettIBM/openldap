@@ -44,7 +44,7 @@ RUN dnf install -y \
     mkdir -p /var/run/openldap && \
     chmod a+rwx -R /var/run/openldap && \
     chmod -R a+rw /opt/openshift && \
-    chmod -R 765 /usr/sbin/slapd
+    chmod -R 777 /usr/sbin/slapd
 
 # Set OpenLDAP data and config directories in a data volume
 VOLUME ["/var/lib/ldap", "/etc/openldap"]
